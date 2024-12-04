@@ -14,7 +14,6 @@ Ubuntu 20.04.6 LTS
    ```
    sudo ./create_vnet.sh
    ```
-   ![image01]()
 1. client から server に ping が通るかを確かめる.
    ```
    sudo ip netns exec client ping 192.168.100.10
@@ -47,12 +46,10 @@ Ubuntu 20.04.6 LTS
    ```
    sudo ip netns exec client ./tcp_client
    ```
-   ![image02]()
 1. 別ターミナルで tcpdump コマンドを使ってパケットキャプチャしながら動かし, 出力ファイルを Wireshark で表示
    ```
    sudo ip netns exec router tcpdump -i veth-router1 -w /tmp/tcpdump-file.pcap
    ```
-   ![image03]()
 
 ### TCP サーバーの I/O 多重化
 
@@ -65,11 +62,3 @@ Ubuntu 20.04.6 LTS
    sudo ip netns exec client nc 192.168.100.10 8000
    Hello! (適当なメッセージ)
    ```
-
-![image04]()
-
-## 参考文献
-
-### 書籍
-
-- [awesome-readme](https://github.com/matiassingers/awesome-readme)
