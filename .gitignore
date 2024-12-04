@@ -1,0 +1,9 @@
+# all executable files
+*
+!*/
+!*.*
+!Makefile
+# all object files
+*.o
+# .vscode directory
+.vscode/
